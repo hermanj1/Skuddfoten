@@ -15,12 +15,15 @@ body{
 header{
     text-align: center;
     padding: 0 0 1rem 0;
+    background-color: #819b5a;
+    width: 100%;
 
 }
 
 header nav ul{
-    margin: 1rem 0 0 0;
-    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
 }
 
 header nav span a{
@@ -28,6 +31,8 @@ header nav span a{
     text-transform: uppercase;
 
 }
+
+
 
 nav a{
     text-decoration: none;
