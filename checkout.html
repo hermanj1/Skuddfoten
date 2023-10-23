@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---Henter ikonpakke fra fontawesome-->
+    <link href="css/font/css/fontawesome.css" rel="stylesheet">
+    <link href="css/font/css/brands.css" rel="stylesheet">
+    <link href="css/font/css/solid.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Skuddfoten</title>
+</head>
+<body>
+    <div id="grid-container">
+        <header>
+            <nav>
+                <i id="ham" class="fa-solid fa-bars"></i>
+                <ul class="navbar">
+                    <li><a href="index.html">Hjem</a></li>
+                    <li><a href="products.html">Produktsside</a></li>
+                    <li><a href="checkout.html">Handlekurv</a></li>
+                </ul>
+
+                <a href="#" id="logo"><h1>Skuddfoten</h1></a>
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+               
+            </nav>
+        </header>
+        <main>
+            
+                <h1>Handlekurv</h1>
+
+                <div id="kvittering">
+                    <section>
+                        <img id="bilde" src="img/football-19115_640.jpg" alt="Nike Fotballsko gule og hvite">
+                        <article>
+                            <p>Nike Tiempo Legend 9 Elite</p>
+                            <p>Pris: 3299,-</p>
+                        </article>
+                    </section>
+
+                    <section id="oppsummering">
+                        <h5>Oppsummering</h5>
+                        <h5>3299,-</h5>
+                    </section>
+
+                    <section id="dicount-code">
+                        <h3>Rabattkode</h3>
+                        <form>
+                            <input type="text">
+                        </form>
+                    </section>
+
+                    <section id="totalt">
+                        <h3>Totalt</h3>
+                        <h3>3299,-</h3>
+                    </section>
+
+                    <section>
+                        <h3 id="betaling">Gå til betaling</h3>
+                    </section>
+                </div>
+        </main>
+        <footer>
+            <h4>Om Skuddfoten</h4>
+            <p>Vår historie</p>
+            <p>Bærekraft og miljø</p>
+        
+        
+            <h4>Kontakt oss</h4>
+            <p>e-post: skuddfoten@123.com</p>
+            <p>telefon: 69 33 33 33</p>
+        </footer>
+    </div>
+
+    <script>
+        // Finn navigasjonsmenyen
+        let x = document.querySelector(".navbar")
+        // Legg til en hendelseslytter for klikk på menyikonet (ham)
+        document.getElementById("ham").addEventListener("click", (e) => {
+            // Sjekk om navigasjonsmenyen allerede har klassen "responsive"
+            if (x.className === "navbar") {
+                // Hvis ikke, legg til klassen for responsiv meny
+                x.className += " responsive";
+            } else {
+                // Hvis den allerede har klassen, fjern den for å gjøre menyen skjult
+                x.className = "navbar"
+            }
+        })
+    </script>
+</body>

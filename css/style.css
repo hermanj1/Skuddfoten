@@ -6,10 +6,64 @@ html{
     font-size: calc(1em + 1vw);
 }
 
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar{
+    display: none;
+}
+
+.responsive {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: #242424;
+    margin: 0;
+    padding: 0;
+    top: 100px;
+    width: 100%;
+    list-style: none;
+}
+
+.responsive a {
+    color: #fff;
+    display: inline-block;
+    padding: 1rem;
+    text-decoration: none;
+}
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     background-color: #efefef;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+}
+
+header, main, footer{
+    padding: 1rem;
+}
+
+#logo{
+    display: flex;
+    color:#fff;
+    text-decoration: none;
+}
+
+header span a{
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+
 }
 
 header{
@@ -17,32 +71,27 @@ header{
     padding: 0 0 1rem 0;
     background-color: #819b5a;
     width: 100%;
+    color: #efefef;
+    grid-area: header;
 
+}
+
+header div{
+    flex: right;
+    justify-content: space-between;
 }
 
 header nav ul{
     display: flex;
     justify-content: space-between;
-    position: relative;
-}
-
-header nav span a{
-    font-weight: 900;
-    text-transform: uppercase;
-
+    position: top;
 }
 
 
-
-nav a{
-    text-decoration: none;
-    color: #000;
-    padding: 1rem;
-    display: inline-block;
-}
 
 main{
     text-align: center;
+    grid-area: main;
 
 }
 
@@ -52,7 +101,7 @@ main section h2{
 
 article{
     max-width: 400px;
-    min-width: 250px;
+    min-width: 100px;
     width: 100%;
     margin: 1rem auto;
     background-color: #fff;
@@ -61,20 +110,6 @@ article{
 main section article img{
     width: 100%;
 
-}
-
-h1{
-    font-size: 2rem;
-}
-h2{
-    font-size: 1.8rem;
-}
-h3{
-    font-size: 1.6rem;
-}
-p{
-    font-size: 1.4rem;
-    margin: 15px;
 }
 
 .product-side-btn{
@@ -86,4 +121,156 @@ p{
     margin: 1rem;
 }
 
+footer{
+    grid-area: footer;
+    background-color: gray;
+}
 
+footer nav ul{
+    text-align: left;
+    background-color: #efefef;
+    margin: 0;
+}
+
+footer nav li{
+    text-decoration: none;
+    list-style: none;
+    margin: 0.6rem 0 0 0;
+    padding: 0;
+}
+
+
+/*Produkt side*/
+#velg-str{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-style: solid;
+    border-color: #242424;
+    border-width: 2px;
+    padding: 0.1rem;
+    background-color: lightgray;
+}
+
+#handlekurv-knapp{
+    border-style: solid;
+    border-color: #242424;
+    border-width: 2px;
+    padding: 1rem;
+    background-color: #819b5a;
+    color: #fff;
+    text-decoration: none;
+}
+#bilde{
+    max-width: 75%;
+    height: auto;
+}
+
+/*Handlekurv siden*/
+
+#kvittering{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-style: solid;
+    border-color: #242424;
+    border-width: 2px;
+    padding: 1rem;
+}
+
+#kvittering section{
+    display: flex;
+    background-color: none;
+}
+
+#kvittering section img{
+    width: 40%;
+    height: auto;
+}
+
+#kvittering section article{
+    background-color: #efefef;
+}
+
+#oppsummering{
+    display: flex;
+    justify-content: space-around;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-width: 2px;
+    width: 90%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#dicount-code{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#totalt{
+    display: flex;
+    justify-content: space-around;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-width: 2px;
+    width: 90%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#betaling{
+    border-style: solid;
+    border-color: #242424;
+    border-width: 2px;
+    padding: 1rem;
+    background-color: #819b5a;
+    color: #fff;
+}
+
+
+    @media only screen and (min-width: 800px){
+        #grid-container{
+            grid-template-areas: "header header header" "main main main" "footer footer footer";
+        }
+
+        .navbar{
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            margin: 0;
+            list-style: none;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        #ham{
+            display: none;
+        }   
+
+        /*Handlekurv side*/
+        #kvittering{
+            max-width: 70vh;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #produkter{
+            display: flex;
+        }
+
+        #hoyre-side{
+            max-width: 50vh;
+        }
+
+        #nyheter{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #nyheter article{
+            margin: 1rem;
+        }
+
+
+    }

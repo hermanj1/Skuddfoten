@@ -1,11 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---Henter ikonpakke fra fontawesome-->
+    <link href="css/font/css/fontawesome.css" rel="stylesheet">
+    <link href="css/font/css/brands.css" rel="stylesheet">
+    <link href="css/font/css/solid.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Skuddfoten</title>
+</head>
+<body>
+    <div id="grid-container">
+        <header>
+            <nav>
+                <i id="ham" class="fa-solid fa-bars"></i>
+                <ul class="navbar">
+                    <li><a href="index.html">Hjem</a></li>
+                    <li><a href="products.html">Produktsside</a></li>
+                    <li><a href="checkout.html">Handlekurv</a></li>
+                </ul>
+
+                <a href="#" id="logo"><h1>Skuddfoten</h1></a>
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+               
+            </nav>
+        </header>
+        <main id="produkter">
+
+            <section>
+                <img id="bilde" src="img/football-19115_640.jpg" alt="Nike Fotballsko gule og hvite">
+                    <h3>Nike Tiempo Legend 9 Elite</h3>
+                    <h4>Pris: 3299,-</h4>
+            </section>
+            <section id="hoyre-side">
+                <div id="velg-str">
+                    <h4>Velg størrelse</h4>
+                    <i class="fa-solid fa-arrow-down"></i>
+                </div>
+
+                <a href="checkout.html"><h3 id="handlekurv-knapp">Plasser i handlekurv</h3></a>
+                <h5>Beskrivelse</h5>
+                <p>Nike Tiempo Legend 9 Elite er den nyeste modellen i Elite-kolleksjonen til Nike. Denne skoen vil gi deg et fortrinn og en drivkraft som ingen annen sko vil.</p>
+            </section>
+            
 
 
-<section id="dicount-code">
-    <h3>Rabattkode</h3>
-    <form>
-        <label for="dicount-code">Din rabattkode</label>
-        <input type="text" id="dicount-code">
-        <input type="submit" value="Løs inn">
-    </form>
-    
-</section>
+        </main>
+        <footer>
+            <h4>Om Skuddfoten</h4>
+            <p>Vår historie</p>
+            <p>Bærekraft og miljø</p>
+        
+        
+            <h4>Kontakt oss</h4>
+            <p>e-post: skuddfoten@123.com</p>
+            <p>telefon: 69 33 33 33</p>
+        </footer>
+    </div>
+
+        <script>
+            // Finn navigasjonsmenyen
+            let x = document.querySelector(".navbar")
+            // Legg til en hendelseslytter for klikk på menyikonet (ham)
+            document.getElementById("ham").addEventListener("click", (e) => {
+                // Sjekk om navigasjonsmenyen allerede har klassen "responsive"
+                if (x.className === "navbar") {
+                    // Hvis ikke, legg til klassen for responsiv meny
+                    x.className += " responsive";
+                } else {
+                    // Hvis den allerede har klassen, fjern den for å gjøre menyen skjult
+                    x.className = "navbar"
+                }
+            })
+        </script>
+</body>
